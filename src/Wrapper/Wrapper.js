@@ -14,5 +14,6 @@ const Wrapper = styled.section`
   padding: 4em;
   background: papayawhip;
 `;
+
 export default Title;
 export default Wrapper;
