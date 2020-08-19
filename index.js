@@ -1,6 +1,7 @@
-import { Wrapper, Title } from './src/Wrapper/Wrapper';
+import { Title } from './src/Wrapper/Wrapper';
+import { Wrapper } from './src/Wrapper/Wrapper';
 
-module.exports = {
+export default {
   Wrapper,
   Title,
 };
