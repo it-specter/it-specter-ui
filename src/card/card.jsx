@@ -1,5 +1,5 @@
 import React from 'react';
-import StyledCard from './card.styles';
+import StyledCard from './Card.styles';
 
 const Card = ({ children, height, color }) => {
   return (

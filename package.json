@@ -1,8 +1,9 @@
 {
   "name": "it-specter-ui",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
+  "module": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +19,14 @@
   "homepage": "https://github.com/it-specter/it-specter-ui#readme",
   "dependencies": {
     "styled-components": "^5.1.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/preset-react": "^7.9.4"
   }
 }
