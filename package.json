@@ -1,6 +1,6 @@
 {
   "name": "it-specter-ui",
-  "version": "1.0.14",
+  "version": "1.0.16",
   "description": "",
   "main": "index.js",
   "module": "src/index.js",
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/it-specter/it-specter-ui#readme",
   "dependencies": {
     "@babel/core": "^7.11.4",
+    "prop-types": "^15.7.2",
     "styled-components": "^5.1.1"
   },
   "eslintConfig": {
