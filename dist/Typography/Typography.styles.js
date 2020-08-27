@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { flexboxItemsAlignSelf } from './../../helpers/flexbox/items';
+import { flexboxItemsAlignSelf } from './../dist/helpers/flexbox/items';
 
-const typographyFontSize = props => {
+const typographyFontSize = (props) => {
   // Fallback value if we can't get access to props
   if (!props || !props.theme || !props.theme.typograph.fontSize) return '2rem'; // If no variant is specified, return the Typography Size in our theme
 
@@ -66,9 +66,10 @@ const typographyFontSize = props => {
   return fontSize;
 };
 
-const typographyFontWeight = props => {
+const typographyFontWeight = (props) => {
   // Fallback value if we can't get access to props
-  if (!props || !props.theme || !props.theme.typograph.fontWeight) return 'normal'; // If no variant is specified, return the Typography Size in our theme
+  if (!props || !props.theme || !props.theme.typograph.fontWeight)
+    return 'normal'; // If no variant is specified, return the Typography Size in our theme
 
   if (!props.variant) return props.theme.typograph.fontWeight; // Dynamically determine the Typography Size based on props
 
@@ -131,9 +132,10 @@ const typographyFontWeight = props => {
   return fontWeight;
 };
 
-const typographyLetterSpacing = props => {
+const typographyLetterSpacing = (props) => {
   // Fallback value if we can't get access to props
-  if (!props || !props.theme || !props.theme.typograph.letterSpacing) return 'normal'; // If no variant is specified, return the Typography Size in our theme
+  if (!props || !props.theme || !props.theme.typograph.letterSpacing)
+    return 'normal'; // If no variant is specified, return the Typography Size in our theme
 
   if (!props.variant) return props.theme.typograph.letterSpacing; // Dynamically determine the Typography Size based on props
 
@@ -197,10 +199,11 @@ const typographyLetterSpacing = props => {
 };
 
 const StyledTypography = styled.div`
-  color: ${props => props.color ? props.color : props.theme.typograph.colorDark};
-  font-size: ${props => typographyFontSize(props)};
-  font-weight: ${props => typographyFontWeight(props)};
-  letter-spacing: ${props => typographyLetterSpacing(props)};
-  font-family: ${props => props.theme.typograph.fontFamily};
+  color: ${(props) =>
+    props.color ? props.color : props.theme.typograph.colorDark};
+  font-size: ${(props) => typographyFontSize(props)};
+  font-weight: ${(props) => typographyFontWeight(props)};
+  letter-spacing: ${(props) => typographyLetterSpacing(props)};
+  font-family: ${(props) => props.theme.typograph.fontFamily};
 `;
 export default StyledTypography;
