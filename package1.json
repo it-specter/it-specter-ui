@@ -1,0 +1,38 @@
+{
+  "name": "it-specter-ui",
+  "version": "1.0.17",
+  "description": "",
+  "main": "index.js",
+  "module": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish:npm": "(if exist dist rmdir /s /q dist) && mkdir dist && babel ./src/ -d dist --copy-files"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/it-specter/it-specter-ui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/it-specter/it-specter-ui/issues"
+  },
+  "homepage": "https://github.com/it-specter/it-specter-ui#readme",
+  "dependencies": {
+    "@babel/core": "^7.11.4",
+    "prop-types": "^15.7.2",
+    "styled-components": "^5.1.1"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/preset-react": "^7.9.4"
+  }
+}
