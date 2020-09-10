@@ -4,7 +4,14 @@ import { StyledTypography } from './styles';
 
 const Typography = (props) => {
   return (
-    <StyledTypography color={props.color} variant={props.variant}>
+    <StyledTypography
+      color={props.color}
+      fontSize={props.fontSize}
+      fontWeight={props.fontWeight}
+      letterSpacing={props.letterSpacing}
+      fontFamily={props.fontFamily}
+      variant={props.variant}
+    >
       {props.children}
     </StyledTypography>
   );
@@ -13,6 +20,10 @@ const Typography = (props) => {
 Typography.propTypes = {
   variant: PropTypes.string,
   color: PropTypes.string,
+  letterSpacing: PropTypes.string,
+  fontSize: PropTypes.string,
+  fontWeight: PropTypes.string,
+  fontFamily: PropTypes.string
 };
 
 Typography.defaultProps = {

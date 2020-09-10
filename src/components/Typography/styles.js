@@ -156,10 +156,11 @@ const typographyLetterSpacing = (props) => {
 const StyledTypography = styled.div`
   color: ${(props) =>
     props.color ? props.color : props.theme.typograph.colorDark};
-  font-size: ${(props) => typographyFontSize(props)};
-  font-weight: ${(props) => typographyFontWeight(props)};
-  letter-spacing: ${(props) => typographyLetterSpacing(props)};
-  font-family: ${(props) => props.theme.typograph.fontFamily};
+  font-size: ${(props) => props.fontSize ? props.fontSize : typographyFontSize(props)};
+  font-weight: ${(props) => props.fontWeight ? props.fontWeight : typographyFontWeight(props)};
+  letter-spacing: ${(props) =>
+    props.letterSpacing ? props.letterSpacing : typographyLetterSpacing(props)};
+  font-family: ${(props) => props.fontFamily ? props.fontFamily : props.theme.typograph.fontFamily};
 `;
 
 export { StyledTypography };
