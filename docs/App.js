@@ -4,13 +4,33 @@ import { ThemeProvider } from 'styled-components';
 import ThemeDefault from './config/themes/themeDefault';
 import { GlobalStyles } from './config/globalStyles/globalStyles';
 
-import { Button, Wrapper, Title, Pic, Typography } from 'ITSpecterUI';
+import { Button, Wrapper, Title, Pic, Typography, Divider } from 'ITSpecterUI';
 import { Form } from 'ITSpecterUI';
 import { Card } from 'ITSpecterUI';
 
 const App = () => (
   <ThemeProvider theme={ThemeDefault}>
     <GlobalStyles />
+    <br></br>
+            <br></br>
+    <Divider variant="list"></Divider>
+            <br></br>
+            <br></br>
+        <Divider variant="list" type="subheader" subheader="subheader"></Divider>  
+            <br></br>
+            <br></br>  
+        <Divider variant="inset"></Divider>
+            <br></br>
+            <br></br>
+        <Divider variant="inset" type="subheader" subheader="subheader"></Divider>
+            <br></br>
+            <br></br>    
+        <Divider variant="middle"></Divider>
+            <br></br>
+            <br></br>
+        <Card height="300"></Card>
+        <br></br>
+        <br></br>
       <Typography variant="headline_1">Typography</Typography>
       <br/>
       <Typography variant="headline_2">Typography</Typography>
