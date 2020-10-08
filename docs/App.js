@@ -1,71 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { ThemeProvider } from 'styled-components';
 import ThemeDefault from './config/themes/themeDefault';
 import { GlobalStyles } from './config/globalStyles/globalStyles';
-
-import { Button, Wrapper, Title, Pic, Typography, Divider } from 'ITSpecterUI';
-import { Form } from 'ITSpecterUI';
 import { Card } from 'ITSpecterUI';
+import { Typography } from 'ITSpecterUI';
+import { Divider } from 'ITSpecterUI';
+import { Input } from 'ITSpecterUI';
+import { Grid } from 'ITSpecterUI';
+import { SignIn } from 'ITSpecterUI';
+import { AutoTest } from 'ITSpecterUI';
 
-const App = () => (
-  <ThemeProvider theme={ThemeDefault}>
-    <GlobalStyles />
-    <br></br>
-            <br></br>
-    <Divider variant="list"></Divider>
-            <br></br>
-            <br></br>
-        <Divider variant="list" type="subheader" subheader="subheader"></Divider>  
-            <br></br>
-            <br></br>  
-        <Divider variant="inset"></Divider>
-            <br></br>
-            <br></br>
-        <Divider variant="inset" type="subheader" subheader="subheader"></Divider>
-            <br></br>
-            <br></br>    
-        <Divider variant="middle"></Divider>
-            <br></br>
-            <br></br>
-        <Card height="300"></Card>
-        <br></br>
-        <br></br>
-      <Typography variant="headline_1">Typography</Typography>
-      <br/>
-      <Typography variant="headline_2">Typography</Typography>
-      <br/>
-      <Typography variant="headline_3">Typography</Typography>
-      <br/>
-      <Typography variant="headline_4">Typography</Typography>
-      <br/>
-      <Typography variant="headline_5" color="red">Typography</Typography>
-      <br/>
-      <Typography variant="headline_6">Typography</Typography>
-      <br/>
-      <Typography variant="subtitle_1">Typography</Typography>
-      <br/>
-      <Typography variant="subtitle_2" color="blue">Typography</Typography>
-      <br/>
-      <Typography variant="body_1">Typography</Typography>
-      <br/>
-      <Typography variant="body_2">Typography</Typography>
-      <br/>
-      <Typography variant="caption">Typography</Typography>
-      <br/>
-      <Typography variant="overline">Typography</Typography>
-  </ThemeProvider>
-);
+import { AutoForm } from 'ITSpecterUI';
+import { config } from 'ITSpecterUI';
+import { test } from 'ITSpecterUI';
+
+const App = () => {
+  // const [status, setStatus] = useState('');
+
+  // const handleSubmit = (form) => {
+  //   setStatus('loading');
+  //   console.log(status);
+  //   setTimeout(() => {
+  //     setStatus('success');
+  //   }, 3000);
+  // };
+  return (
+    <ThemeProvider theme={ThemeDefault}>
+      <GlobalStyles />
+      {/* <Grid variant="FlexContainer" justify="space-between">
+        <Grid variant="FlexItems" xs="4" sm="8" md="6" lg="4" spacing="3">
+          <Card height="300" color="blue">
+            Card 1
+          </Card>
+        </Grid>
+        <Grid variant="FlexItems" xs="4" sm="2" md="2" lg="6" spacing="3">
+          <Card height="300" color="green">
+            Card 2
+          </Card>
+        </Grid>
+        <Grid variant="FlexItems" xs="4" sm="2" md="4" lg="2" spacing="3">
+          <Card height="300" color="red">
+            Card 3
+          </Card>
+        </Grid>
+      </Grid> */}
+      {/* <AutoForm form={config}></AutoForm> */}
+      <AutoTest form={test}></AutoTest>
+      {/* <AutoForm form={config} onSubmit={handleSubmit} status={status}></AutoForm> */}
+      {/* <SignIn></SignIn>  */}
+    </ThemeProvider>
+  );
+};
 
 export default App;
-
-{/* <Button type="submit">Hello world</Button>
-<Wrapper>
-  <Title>Hello World</Title>
-</Wrapper>
-<Form></Form>
-<Card color="red" height="300">
-  Hello
-</Card>
-<Pic size={300} />
-<Pic round /> */}

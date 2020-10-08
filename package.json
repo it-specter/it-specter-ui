@@ -1,6 +1,6 @@
 {
   "name": "it-specter-ui",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "main": "index.js",
   "files": [
     "dist"
@@ -24,10 +24,12 @@
   },
   "dependencies": {
     "prop-types": "^15.7.2",
+    "react-scripts": "3.4.0",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
+    "react-hook-form": "^6.8.6",
     "react-is": "16.8.0",
-    "styled-components": "^5.0.0"
+    "styled-components": "5.0.0"
   },
   "repository": {
     "type": "git",

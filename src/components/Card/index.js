@@ -1,12 +1,28 @@
 import React from 'react';
-import { StyledCardBasis } from './styles';
+import PropTypes from 'prop-types';
+import { StyledCard } from './styles';
 
-const Card = ({ children, color, height, variant }) => {
-    return (
-      <StyledCardBasis variant={variant} height={height} color={color}>
-        {children}
-      </StyledCardBasis>
-    );
-  };
+const Card = (props) => {
+  return (
+    <StyledCard
+      color={props.color}
+      height={props.height}
+      variant={props.variant}
+    >
+      {props.children}
+    </StyledCard>
+  );
+};
 
-export { Card };
+Card.propTypes = {
+  variant: PropTypes.string,
+  color: PropTypes.string,
+  height: PropTypes.string,
+};
+
+// Card.defaultProps = {
+//   children: PropTypes.node.isRequired,
+//   variant: 'Card',
+// };
+
+export default Card;
